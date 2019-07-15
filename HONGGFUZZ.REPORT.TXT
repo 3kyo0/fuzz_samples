@@ -1,0 +1,613 @@
+=====================================================================
+TIME: 2019-07-14.15:30:08
+=====================================================================
+FUZZER ARGS:
+ mutationsPerRun : 6
+ externalCmd     : NULL
+ fuzzStdin       : FALSE
+ timeout         : 5 (sec)
+ ASLimit         : 0 (MiB)
+ RSSLimit        : 0 (MiB)
+ DATALimit       : 0 (MiB)
+ wordlistFile    : NULL
+ fuzzTarget   : ../mpv/build/mpv -length=1 ___FILE___ 
+ORIG_FNAME: ../samples/mkv_samples//f7ac3bfb81405a1770a5e9df952446fe.00004098.honggfuzz.cov
+FUZZ_FNAME: ./SIGABRT.EXC_CRASH.PC.00007fff5eb62b66.STACK.00000017253d9bb4.ADDR.0000000000000000.fuzz
+PID: 38571
+SIGNAL: SIGABRT (6)
+EXCEPTION: EXC_CRASH
+FAULT ADDRESS: 0
+CRASH FRAME PC: 7fff5eb62b66
+STACK HASH: 00000017253d9bb4
+STACK: 
+0   libsystem_kernel.dylib        	0x00007fff5eb62b66 __pthread_kill + 10
+1   libsystem_pthread.dylib       	0x00007fff5ed2d080 pthread_kill + 333
+2   libsystem_c.dylib             	0x00007fff5eabe1ae abort + 127
+3   libsystem_c.dylib             	0x00007fff5ea861ac __assert_rtn + 320
+4   mpv                           	0x000000010bbe9e06 mp_audio_buffer_prepend_silence + 278
+5   mpv                           	0x000000010bc88c00 fill_audio_out_buffers + 2432
+6   mpv                           	0x000000010bcb9be0 run_playloop + 176 (playloop.c:1104)
+7   mpv                           	0x000000010bcaf9e7 play_current_file + 5527 (loadfile.c:1564)
+8   mpv                           	0x000000010bcae244 mp_play_files + 324 (loadfile.c:1736)
+9   mpv                           	0x000000010bcb34a4 mpv_main + 180 (main.c:458)
+10  mpv                           	0x000000010bd3c6fb playback_thread + 43 (macosx_application.m:270)
+11  libsystem_pthread.dylib       	0x00007fff5ed2a661 _pthread_body + 340
+12  libsystem_pthread.dylib       	0x00007fff5ed2a50d _pthread_start + 377
+13  libsystem_pthread.dylib       	0x00007fff5ed29bf9 thread_start + 13
+=====================================================================
+=====================================================================
+TIME: 2019-07-14.20:21:10
+=====================================================================
+FUZZER ARGS:
+ mutationsPerRun : 6
+ externalCmd     : NULL
+ fuzzStdin       : FALSE
+ timeout         : 5 (sec)
+ ASLimit         : 0 (MiB)
+ RSSLimit        : 0 (MiB)
+ DATALimit       : 0 (MiB)
+ wordlistFile    : NULL
+ fuzzTarget   : ../mpv/build/mpv -length=1 ___FILE___ 
+ORIG_FNAME: ../samples/mkv_samples//578a1626d001d28a0936c70799bcc716.00004098.honggfuzz.cov
+FUZZ_FNAME: ./SIGSEGV.EXC_BAD_ACCESS.PC.000000010f7ce4bf.STACK.0000000f38a4c8be.ADDR.0000000000000000.fuzz
+PID: 46823
+SIGNAL: SIGSEGV (11)
+EXCEPTION: EXC_BAD_ACCESS
+FAULT ADDRESS: 0
+CRASH FRAME PC: 10f7ce4bf
+STACK HASH: 0000000f38a4c8be
+STACK: 
+0   mpv                           	0x000000010f7ce4bf fill_audio_out_buffers + 575 (audio.c:810)
+1   mpv                           	0x000000010f7ffbe0 run_playloop + 176 (playloop.c:1104)
+2   mpv                           	0x000000010f7f59e7 play_current_file + 5527 (loadfile.c:1564)
+3   mpv                           	0x000000010f7f4244 mp_play_files + 324 (loadfile.c:1736)
+4   mpv                           	0x000000010f7f94a4 mpv_main + 180 (main.c:458)
+5   mpv                           	0x000000010f8826fb playback_thread + 43 (macosx_application.m:270)
+6   libsystem_pthread.dylib       	0x00007fff5ed2a661 _pthread_body + 340
+7   libsystem_pthread.dylib       	0x00007fff5ed2a50d _pthread_start + 377
+8   libsystem_pthread.dylib       	0x00007fff5ed29bf9 thread_start + 13
+=====================================================================
+=====================================================================
+TIME: 2019-07-14.20:33:48
+=====================================================================
+FUZZER ARGS:
+ mutationsPerRun : 6
+ externalCmd     : NULL
+ fuzzStdin       : FALSE
+ timeout         : 5 (sec)
+ ASLimit         : 0 (MiB)
+ RSSLimit        : 0 (MiB)
+ DATALimit       : 0 (MiB)
+ wordlistFile    : NULL
+ fuzzTarget   : ../mpv/build/mpv -length=1 ___FILE___ 
+ORIG_FNAME: ../samples/mkv_samples//a77720fecd2fe507afcfe44705d28186.000039e1.honggfuzz.cov
+FUZZ_FNAME: ./SIGSEGV.EXC_BAD_ACCESS.PC.000000010fd774bf.STACK.0000000f38a4c8be.ADDR.0000000000000000.fuzz
+PID: 49798
+SIGNAL: SIGSEGV (11)
+EXCEPTION: EXC_BAD_ACCESS
+FAULT ADDRESS: 0
+CRASH FRAME PC: 10fd774bf
+STACK HASH: 0000000f38a4c8be
+STACK: 
+0   mpv                           	0x000000010fd774bf fill_audio_out_buffers + 575 (audio.c:810)
+1   mpv                           	0x000000010fda8be0 run_playloop + 176 (playloop.c:1104)
+2   mpv                           	0x000000010fd9e9e7 play_current_file + 5527 (loadfile.c:1564)
+3   mpv                           	0x000000010fd9d244 mp_play_files + 324 (loadfile.c:1736)
+4   mpv                           	0x000000010fda24a4 mpv_main + 180 (main.c:458)
+5   mpv                           	0x000000010fe2b6fb playback_thread + 43 (macosx_application.m:270)
+6   libsystem_pthread.dylib       	0x00007fff5ed2a661 _pthread_body + 340
+7   libsystem_pthread.dylib       	0x00007fff5ed2a50d _pthread_start + 377
+8   libsystem_pthread.dylib       	0x00007fff5ed29bf9 thread_start + 13
+=====================================================================
+=====================================================================
+TIME: 2019-07-14.23:09:12
+=====================================================================
+FUZZER ARGS:
+ mutationsPerRun : 6
+ externalCmd     : NULL
+ fuzzStdin       : FALSE
+ timeout         : 5 (sec)
+ ASLimit         : 0 (MiB)
+ RSSLimit        : 0 (MiB)
+ DATALimit       : 0 (MiB)
+ wordlistFile    : NULL
+ fuzzTarget   : ../mpv/build/mpv -length=1 ___FILE___ 
+ORIG_FNAME: ../samples/mkv_samples//578a1626d001d28a0936c70799bcc716.00004098.honggfuzz.cov
+FUZZ_FNAME: ./SIGSEGV.EXC_BAD_ACCESS.PC.000000010b5b94bf.STACK.0000000f38a4c8be.ADDR.0000000000000000.fuzz
+PID: 90067
+SIGNAL: SIGSEGV (11)
+EXCEPTION: EXC_BAD_ACCESS
+FAULT ADDRESS: 0
+CRASH FRAME PC: 10b5b94bf
+STACK HASH: 0000000f38a4c8be
+STACK: 
+0   mpv                           	0x000000010b5b94bf fill_audio_out_buffers + 575 (audio.c:810)
+1   mpv                           	0x000000010b5eabe0 run_playloop + 176 (playloop.c:1104)
+2   mpv                           	0x000000010b5e09e7 play_current_file + 5527 (loadfile.c:1564)
+3   mpv                           	0x000000010b5df244 mp_play_files + 324 (loadfile.c:1736)
+4   mpv                           	0x000000010b5e44a4 mpv_main + 180 (main.c:458)
+5   mpv                           	0x000000010b66d6fb playback_thread + 43 (macosx_application.m:270)
+6   libsystem_pthread.dylib       	0x00007fff5ed2a661 _pthread_body + 340
+7   libsystem_pthread.dylib       	0x00007fff5ed2a50d _pthread_start + 377
+8   libsystem_pthread.dylib       	0x00007fff5ed29bf9 thread_start + 13
+=====================================================================
+=====================================================================
+TIME: 2019-07-15.00:30:29
+=====================================================================
+FUZZER ARGS:
+ mutationsPerRun : 6
+ externalCmd     : NULL
+ fuzzStdin       : FALSE
+ timeout         : 5 (sec)
+ ASLimit         : 0 (MiB)
+ RSSLimit        : 0 (MiB)
+ DATALimit       : 0 (MiB)
+ wordlistFile    : NULL
+ fuzzTarget   : ../mpv/build/mpv -length=1 ___FILE___ 
+ORIG_FNAME: ../samples/mkv_samples//c627dc715d1f6b6e36312ea5247eae35.000035d8.honggfuzz.cov
+FUZZ_FNAME: ./SIGSEGV.EXC_BAD_ACCESS.PC.00000001093664bf.STACK.0000000f38a4c8be.ADDR.0000000000000000.fuzz
+PID: 10001
+SIGNAL: SIGSEGV (11)
+EXCEPTION: EXC_BAD_ACCESS
+FAULT ADDRESS: 0
+CRASH FRAME PC: 1093664bf
+STACK HASH: 0000000f38a4c8be
+STACK: 
+0   mpv                           	0x00000001093664bf fill_audio_out_buffers + 575 (audio.c:810)
+1   mpv                           	0x0000000109397be0 run_playloop + 176 (playloop.c:1104)
+2   mpv                           	0x000000010938d9e7 play_current_file + 5527 (loadfile.c:1564)
+3   mpv                           	0x000000010938c244 mp_play_files + 324 (loadfile.c:1736)
+4   mpv                           	0x00000001093914a4 mpv_main + 180 (main.c:458)
+5   mpv                           	0x000000010941a6fb playback_thread + 43 (macosx_application.m:270)
+6   libsystem_pthread.dylib       	0x00007fff5ed2a661 _pthread_body + 340
+7   libsystem_pthread.dylib       	0x00007fff5ed2a50d _pthread_start + 377
+8   libsystem_pthread.dylib       	0x00007fff5ed29bf9 thread_start + 13
+=====================================================================
+=====================================================================
+TIME: 2019-07-15.01:17:23
+=====================================================================
+FUZZER ARGS:
+ mutationsPerRun : 6
+ externalCmd     : NULL
+ fuzzStdin       : FALSE
+ timeout         : 5 (sec)
+ ASLimit         : 0 (MiB)
+ RSSLimit        : 0 (MiB)
+ DATALimit       : 0 (MiB)
+ wordlistFile    : NULL
+ fuzzTarget   : ../mpv/build/mpv -length=1 ___FILE___ 
+ORIG_FNAME: ../samples/mkv_samples//aca6e333e711e6c6aaa4dd2e23d013b8.00004098.honggfuzz.cov
+FUZZ_FNAME: ./SIGSEGV.EXC_BAD_ACCESS.PC.00000001022254bf.STACK.0000000f38a4c8be.ADDR.0000000000000000.fuzz
+PID: 21818
+SIGNAL: SIGSEGV (11)
+EXCEPTION: EXC_BAD_ACCESS
+FAULT ADDRESS: 0
+CRASH FRAME PC: 1022254bf
+STACK HASH: 0000000f38a4c8be
+STACK: 
+0   mpv                           	0x00000001022254bf fill_audio_out_buffers + 575 (audio.c:810)
+1   mpv                           	0x0000000102256be0 run_playloop + 176 (playloop.c:1104)
+2   mpv                           	0x000000010224c9e7 play_current_file + 5527 (loadfile.c:1564)
+3   mpv                           	0x000000010224b244 mp_play_files + 324 (loadfile.c:1736)
+4   mpv                           	0x00000001022504a4 mpv_main + 180 (main.c:458)
+5   mpv                           	0x00000001022d96fb playback_thread + 43 (macosx_application.m:270)
+6   libsystem_pthread.dylib       	0x00007fff5ed2a661 _pthread_body + 340
+7   libsystem_pthread.dylib       	0x00007fff5ed2a50d _pthread_start + 377
+8   libsystem_pthread.dylib       	0x00007fff5ed29bf9 thread_start + 13
+=====================================================================
+=====================================================================
+TIME: 2019-07-15.02:18:16
+=====================================================================
+FUZZER ARGS:
+ mutationsPerRun : 6
+ externalCmd     : NULL
+ fuzzStdin       : FALSE
+ timeout         : 5 (sec)
+ ASLimit         : 0 (MiB)
+ RSSLimit        : 0 (MiB)
+ DATALimit       : 0 (MiB)
+ wordlistFile    : NULL
+ fuzzTarget   : ../mpv/build/mpv -length=1 ___FILE___ 
+ORIG_FNAME: ../samples/mkv_samples//test_01.mkv
+FUZZ_FNAME: ./SIGSEGV.EXC_BAD_ACCESS.PC.000000010698c4bf.STACK.0000000f38a4c8be.ADDR.0000000000000000.fuzz
+PID: 39049
+SIGNAL: SIGSEGV (11)
+EXCEPTION: EXC_BAD_ACCESS
+FAULT ADDRESS: 0
+CRASH FRAME PC: 10698c4bf
+STACK HASH: 0000000f38a4c8be
+STACK: 
+0   mpv                           	0x000000010698c4bf fill_audio_out_buffers + 575 (audio.c:810)
+1   mpv                           	0x00000001069bdbe0 run_playloop + 176 (playloop.c:1104)
+2   mpv                           	0x00000001069b39e7 play_current_file + 5527 (loadfile.c:1564)
+3   mpv                           	0x00000001069b2244 mp_play_files + 324 (loadfile.c:1736)
+4   mpv                           	0x00000001069b74a4 mpv_main + 180 (main.c:458)
+5   mpv                           	0x0000000106a406fb playback_thread + 43 (macosx_application.m:270)
+6   libsystem_pthread.dylib       	0x00007fff5ed2a661 _pthread_body + 340
+7   libsystem_pthread.dylib       	0x00007fff5ed2a50d _pthread_start + 377
+8   libsystem_pthread.dylib       	0x00007fff5ed29bf9 thread_start + 13
+=====================================================================
+=====================================================================
+TIME: 2019-07-15.04:52:41
+=====================================================================
+FUZZER ARGS:
+ mutationsPerRun : 6
+ externalCmd     : NULL
+ fuzzStdin       : FALSE
+ timeout         : 5 (sec)
+ ASLimit         : 0 (MiB)
+ RSSLimit        : 0 (MiB)
+ DATALimit       : 0 (MiB)
+ wordlistFile    : NULL
+ fuzzTarget   : ../mpv/build/mpv -length=1 ___FILE___ 
+ORIG_FNAME: ../samples/mkv_samples//c627dc715d1f6b6e36312ea5247eae35.000035d8.honggfuzz.cov
+FUZZ_FNAME: ./SIGSEGV.EXC_BAD_ACCESS.PC.000000010df2f4bf.STACK.0000000f38a4c8be.ADDR.0000000000000000.fuzz
+PID: 82033
+SIGNAL: SIGSEGV (11)
+EXCEPTION: EXC_BAD_ACCESS
+FAULT ADDRESS: 0
+CRASH FRAME PC: 10df2f4bf
+STACK HASH: 0000000f38a4c8be
+STACK: 
+0   mpv                           	0x000000010df2f4bf fill_audio_out_buffers + 575 (audio.c:810)
+1   mpv                           	0x000000010df60be0 run_playloop + 176 (playloop.c:1104)
+2   mpv                           	0x000000010df569e7 play_current_file + 5527 (loadfile.c:1564)
+3   mpv                           	0x000000010df55244 mp_play_files + 324 (loadfile.c:1736)
+4   mpv                           	0x000000010df5a4a4 mpv_main + 180 (main.c:458)
+5   mpv                           	0x000000010dfe36fb playback_thread + 43 (macosx_application.m:270)
+6   libsystem_pthread.dylib       	0x00007fff5ed2a661 _pthread_body + 340
+7   libsystem_pthread.dylib       	0x00007fff5ed2a50d _pthread_start + 377
+8   libsystem_pthread.dylib       	0x00007fff5ed29bf9 thread_start + 13
+=====================================================================
+=====================================================================
+TIME: 2019-07-15.04:53:29
+=====================================================================
+FUZZER ARGS:
+ mutationsPerRun : 6
+ externalCmd     : NULL
+ fuzzStdin       : FALSE
+ timeout         : 5 (sec)
+ ASLimit         : 0 (MiB)
+ RSSLimit        : 0 (MiB)
+ DATALimit       : 0 (MiB)
+ wordlistFile    : NULL
+ fuzzTarget   : ../mpv/build/mpv -length=1 ___FILE___ 
+ORIG_FNAME: ../samples/mkv_samples//test_01.mkv
+FUZZ_FNAME: ./SIGSEGV.EXC_BAD_ACCESS.PC.000000010c6524bf.STACK.0000000f38a4c8be.ADDR.0000000000000000.fuzz
+PID: 82189
+SIGNAL: SIGSEGV (11)
+EXCEPTION: EXC_BAD_ACCESS
+FAULT ADDRESS: 0
+CRASH FRAME PC: 10c6524bf
+STACK HASH: 0000000f38a4c8be
+STACK: 
+0   mpv                           	0x000000010c6524bf fill_audio_out_buffers + 575 (audio.c:810)
+1   mpv                           	0x000000010c683be0 run_playloop + 176 (playloop.c:1104)
+2   mpv                           	0x000000010c6799e7 play_current_file + 5527 (loadfile.c:1564)
+3   mpv                           	0x000000010c678244 mp_play_files + 324 (loadfile.c:1736)
+4   mpv                           	0x000000010c67d4a4 mpv_main + 180 (main.c:458)
+5   mpv                           	0x000000010c7066fb playback_thread + 43 (macosx_application.m:270)
+6   libsystem_pthread.dylib       	0x00007fff5ed2a661 _pthread_body + 340
+7   libsystem_pthread.dylib       	0x00007fff5ed2a50d _pthread_start + 377
+8   libsystem_pthread.dylib       	0x00007fff5ed29bf9 thread_start + 13
+=====================================================================
+=====================================================================
+TIME: 2019-07-15.05:13:14
+=====================================================================
+FUZZER ARGS:
+ mutationsPerRun : 6
+ externalCmd     : NULL
+ fuzzStdin       : FALSE
+ timeout         : 5 (sec)
+ ASLimit         : 0 (MiB)
+ RSSLimit        : 0 (MiB)
+ DATALimit       : 0 (MiB)
+ wordlistFile    : NULL
+ fuzzTarget   : ../mpv/build/mpv -length=1 ___FILE___ 
+ORIG_FNAME: ../samples/mkv_samples//578a1626d001d28a0936c70799bcc716.00004098.honggfuzz.cov
+FUZZ_FNAME: ./SIGSEGV.EXC_BAD_ACCESS.PC.00000001095e24bf.STACK.0000000f38a4c8be.ADDR.0000000000000000.fuzz
+PID: 86982
+SIGNAL: SIGSEGV (11)
+EXCEPTION: EXC_BAD_ACCESS
+FAULT ADDRESS: 0
+CRASH FRAME PC: 1095e24bf
+STACK HASH: 0000000f38a4c8be
+STACK: 
+0   mpv                           	0x00000001095e24bf fill_audio_out_buffers + 575 (audio.c:810)
+1   mpv                           	0x0000000109613be0 run_playloop + 176 (playloop.c:1104)
+2   mpv                           	0x00000001096099e7 play_current_file + 5527 (loadfile.c:1564)
+3   mpv                           	0x0000000109608244 mp_play_files + 324 (loadfile.c:1736)
+4   mpv                           	0x000000010960d4a4 mpv_main + 180 (main.c:458)
+5   mpv                           	0x00000001096966fb playback_thread + 43 (macosx_application.m:270)
+6   libsystem_pthread.dylib       	0x00007fff5ed2a661 _pthread_body + 340
+7   libsystem_pthread.dylib       	0x00007fff5ed2a50d _pthread_start + 377
+8   libsystem_pthread.dylib       	0x00007fff5ed29bf9 thread_start + 13
+=====================================================================
+=====================================================================
+TIME: 2019-07-15.07:50:40
+=====================================================================
+FUZZER ARGS:
+ mutationsPerRun : 6
+ externalCmd     : NULL
+ fuzzStdin       : FALSE
+ timeout         : 5 (sec)
+ ASLimit         : 0 (MiB)
+ RSSLimit        : 0 (MiB)
+ DATALimit       : 0 (MiB)
+ wordlistFile    : NULL
+ fuzzTarget   : ../mpv/build/mpv -length=1 ___FILE___ 
+ORIG_FNAME: [DYNAMIC]
+FUZZ_FNAME: ./SIGSEGV.EXC_BAD_ACCESS.PC.0000000109d8e4bf.STACK.0000000f38a4c8be.ADDR.0000000000000000.fuzz
+PID: 30806
+SIGNAL: SIGSEGV (11)
+EXCEPTION: EXC_BAD_ACCESS
+FAULT ADDRESS: 0
+CRASH FRAME PC: 109d8e4bf
+STACK HASH: 0000000f38a4c8be
+STACK: 
+0   mpv                           	0x0000000109d8e4bf fill_audio_out_buffers + 575 (audio.c:810)
+1   mpv                           	0x0000000109dbfbe0 run_playloop + 176 (playloop.c:1104)
+2   mpv                           	0x0000000109db59e7 play_current_file + 5527 (loadfile.c:1564)
+3   mpv                           	0x0000000109db4244 mp_play_files + 324 (loadfile.c:1736)
+4   mpv                           	0x0000000109db94a4 mpv_main + 180 (main.c:458)
+5   mpv                           	0x0000000109e426fb playback_thread + 43 (macosx_application.m:270)
+6   libsystem_pthread.dylib       	0x00007fff5ed2a661 _pthread_body + 340
+7   libsystem_pthread.dylib       	0x00007fff5ed2a50d _pthread_start + 377
+8   libsystem_pthread.dylib       	0x00007fff5ed29bf9 thread_start + 13
+=====================================================================
+=====================================================================
+TIME: 2019-07-15.12:23:55
+=====================================================================
+FUZZER ARGS:
+ mutationsPerRun : 6
+ externalCmd     : NULL
+ fuzzStdin       : FALSE
+ timeout         : 5 (sec)
+ ASLimit         : 0 (MiB)
+ RSSLimit        : 0 (MiB)
+ DATALimit       : 0 (MiB)
+ wordlistFile    : NULL
+ fuzzTarget   : ../mpv/build/mpv -length=1 ___FILE___ 
+ORIG_FNAME: ../samples/mkv_samples//a77720fecd2fe507afcfe44705d28186.000039e1.honggfuzz.cov
+FUZZ_FNAME: ./SIGSEGV.EXC_BAD_ACCESS.PC.000000010c7d24bf.STACK.0000000f38a4c8be.ADDR.0000000000000000.fuzz
+PID: 3590
+SIGNAL: SIGSEGV (11)
+EXCEPTION: EXC_BAD_ACCESS
+FAULT ADDRESS: 0
+CRASH FRAME PC: 10c7d24bf
+STACK HASH: 0000000f38a4c8be
+STACK: 
+0   mpv                           	0x000000010c7d24bf fill_audio_out_buffers + 575 (audio.c:810)
+1   mpv                           	0x000000010c803be0 run_playloop + 176 (playloop.c:1104)
+2   mpv                           	0x000000010c7f99e7 play_current_file + 5527 (loadfile.c:1564)
+3   mpv                           	0x000000010c7f8244 mp_play_files + 324 (loadfile.c:1736)
+4   mpv                           	0x000000010c7fd4a4 mpv_main + 180 (main.c:458)
+5   mpv                           	0x000000010c8866fb playback_thread + 43 (macosx_application.m:270)
+6   libsystem_pthread.dylib       	0x00007fff5ed2a661 _pthread_body + 340
+7   libsystem_pthread.dylib       	0x00007fff5ed2a50d _pthread_start + 377
+8   libsystem_pthread.dylib       	0x00007fff5ed29bf9 thread_start + 13
+=====================================================================
+=====================================================================
+TIME: 2019-07-15.12:32:08
+=====================================================================
+FUZZER ARGS:
+ mutationsPerRun : 6
+ externalCmd     : NULL
+ fuzzStdin       : FALSE
+ timeout         : 5 (sec)
+ ASLimit         : 0 (MiB)
+ RSSLimit        : 0 (MiB)
+ DATALimit       : 0 (MiB)
+ wordlistFile    : NULL
+ fuzzTarget   : ../mpv/build/mpv -length=1 ___FILE___ 
+ORIG_FNAME: ../samples/mkv_samples//a77720fecd2fe507afcfe44705d28186.000039e1.honggfuzz.cov
+FUZZ_FNAME: ./SIGSEGV.EXC_BAD_ACCESS.PC.0000000104e0c4bf.STACK.0000000f38a4c8be.ADDR.0000000000000000.fuzz
+PID: 6152
+SIGNAL: SIGSEGV (11)
+EXCEPTION: EXC_BAD_ACCESS
+FAULT ADDRESS: 0
+CRASH FRAME PC: 104e0c4bf
+STACK HASH: 0000000f38a4c8be
+STACK: 
+0   mpv                           	0x0000000104e0c4bf fill_audio_out_buffers + 575 (audio.c:810)
+1   mpv                           	0x0000000104e3dbe0 run_playloop + 176 (playloop.c:1104)
+2   mpv                           	0x0000000104e339e7 play_current_file + 5527 (loadfile.c:1564)
+3   mpv                           	0x0000000104e32244 mp_play_files + 324 (loadfile.c:1736)
+4   mpv                           	0x0000000104e374a4 mpv_main + 180 (main.c:458)
+5   mpv                           	0x0000000104ec06fb playback_thread + 43 (macosx_application.m:270)
+6   libsystem_pthread.dylib       	0x00007fff5ed2a661 _pthread_body + 340
+7   libsystem_pthread.dylib       	0x00007fff5ed2a50d _pthread_start + 377
+8   libsystem_pthread.dylib       	0x00007fff5ed29bf9 thread_start + 13
+=====================================================================
+=====================================================================
+TIME: 2019-07-15.12:52:01
+=====================================================================
+FUZZER ARGS:
+ mutationsPerRun : 6
+ externalCmd     : NULL
+ fuzzStdin       : FALSE
+ timeout         : 5 (sec)
+ ASLimit         : 0 (MiB)
+ RSSLimit        : 0 (MiB)
+ DATALimit       : 0 (MiB)
+ wordlistFile    : NULL
+ fuzzTarget   : ../mpv/build/mpv -length=1 ___FILE___ 
+ORIG_FNAME: ../samples/mkv_samples//test_01.mkv
+FUZZ_FNAME: ./SIGSEGV.EXC_BAD_ACCESS.PC.000000010ed954bf.STACK.0000000f38a4c8be.ADDR.000000004d555462.fuzz
+PID: 11717
+SIGNAL: SIGSEGV (11)
+EXCEPTION: EXC_BAD_ACCESS
+FAULT ADDRESS: 4d555462
+CRASH FRAME PC: 10ed954bf
+STACK HASH: 0000000f38a4c8be
+STACK: 
+0   mpv                           	0x000000010ed954bf fill_audio_out_buffers + 575 (audio.c:810)
+1   mpv                           	0x000000010edc6be0 run_playloop + 176 (playloop.c:1104)
+2   mpv                           	0x000000010edbc9e7 play_current_file + 5527 (loadfile.c:1564)
+3   mpv                           	0x000000010edbb244 mp_play_files + 324 (loadfile.c:1736)
+4   mpv                           	0x000000010edc04a4 mpv_main + 180 (main.c:458)
+5   mpv                           	0x000000010ee496fb playback_thread + 43 (macosx_application.m:270)
+6   libsystem_pthread.dylib       	0x00007fff5ed2a661 _pthread_body + 340
+7   libsystem_pthread.dylib       	0x00007fff5ed2a50d _pthread_start + 377
+8   libsystem_pthread.dylib       	0x00007fff5ed29bf9 thread_start + 13
+=====================================================================
+=====================================================================
+TIME: 2019-07-15.12:52:51
+=====================================================================
+FUZZER ARGS:
+ mutationsPerRun : 6
+ externalCmd     : NULL
+ fuzzStdin       : FALSE
+ timeout         : 5 (sec)
+ ASLimit         : 0 (MiB)
+ RSSLimit        : 0 (MiB)
+ DATALimit       : 0 (MiB)
+ wordlistFile    : NULL
+ fuzzTarget   : ../mpv/build/mpv -length=1 ___FILE___ 
+ORIG_FNAME: [DYNAMIC]
+FUZZ_FNAME: ./SIGSEGV.EXC_BAD_ACCESS.PC.000000010d8e34bf.STACK.0000000f38a4c8be.ADDR.0000000000000008.fuzz
+PID: 11949
+SIGNAL: SIGSEGV (11)
+EXCEPTION: EXC_BAD_ACCESS
+FAULT ADDRESS: 8
+CRASH FRAME PC: 10d8e34bf
+STACK HASH: 0000000f38a4c8be
+STACK: 
+0   mpv                           	0x000000010d8e34bf fill_audio_out_buffers + 575 (audio.c:810)
+1   mpv                           	0x000000010d914be0 run_playloop + 176 (playloop.c:1104)
+2   mpv                           	0x000000010d90a9e7 play_current_file + 5527 (loadfile.c:1564)
+3   mpv                           	0x000000010d909244 mp_play_files + 324 (loadfile.c:1736)
+4   mpv                           	0x000000010d90e4a4 mpv_main + 180 (main.c:458)
+5   mpv                           	0x000000010d9976fb playback_thread + 43 (macosx_application.m:270)
+6   libsystem_pthread.dylib       	0x00007fff5ed2a661 _pthread_body + 340
+7   libsystem_pthread.dylib       	0x00007fff5ed2a50d _pthread_start + 377
+8   libsystem_pthread.dylib       	0x00007fff5ed29bf9 thread_start + 13
+=====================================================================
+=====================================================================
+TIME: 2019-07-15.13:06:51
+=====================================================================
+FUZZER ARGS:
+ mutationsPerRun : 6
+ externalCmd     : NULL
+ fuzzStdin       : FALSE
+ timeout         : 5 (sec)
+ ASLimit         : 0 (MiB)
+ RSSLimit        : 0 (MiB)
+ DATALimit       : 0 (MiB)
+ wordlistFile    : NULL
+ fuzzTarget   : ../mpv/build/mpv -length=1 ___FILE___ 
+ORIG_FNAME: ../samples/mkv_samples//578a1626d001d28a0936c70799bcc716.00004098.honggfuzz.cov
+FUZZ_FNAME: ./SIGSEGV.EXC_BAD_ACCESS.PC.000000010b6574bf.STACK.0000000f38a4c8be.ADDR.0000000000000000.fuzz
+PID: 16053
+SIGNAL: SIGSEGV (11)
+EXCEPTION: EXC_BAD_ACCESS
+FAULT ADDRESS: 0
+CRASH FRAME PC: 10b6574bf
+STACK HASH: 0000000f38a4c8be
+STACK: 
+0   mpv                           	0x000000010b6574bf fill_audio_out_buffers + 575 (audio.c:810)
+1   mpv                           	0x000000010b688be0 run_playloop + 176 (playloop.c:1104)
+2   mpv                           	0x000000010b67e9e7 play_current_file + 5527 (loadfile.c:1564)
+3   mpv                           	0x000000010b67d244 mp_play_files + 324 (loadfile.c:1736)
+4   mpv                           	0x000000010b6824a4 mpv_main + 180 (main.c:458)
+5   mpv                           	0x000000010b70b6fb playback_thread + 43 (macosx_application.m:270)
+6   libsystem_pthread.dylib       	0x00007fff5ed2a661 _pthread_body + 340
+7   libsystem_pthread.dylib       	0x00007fff5ed2a50d _pthread_start + 377
+8   libsystem_pthread.dylib       	0x00007fff5ed29bf9 thread_start + 13
+=====================================================================
+=====================================================================
+TIME: 2019-07-15.16:01:11
+=====================================================================
+FUZZER ARGS:
+ mutationsPerRun : 6
+ externalCmd     : NULL
+ fuzzStdin       : FALSE
+ timeout         : 5 (sec)
+ ASLimit         : 0 (MiB)
+ RSSLimit        : 0 (MiB)
+ DATALimit       : 0 (MiB)
+ wordlistFile    : NULL
+ fuzzTarget   : ../mpv/build/mpv -length=1 ___FILE___ 
+ORIG_FNAME: [DYNAMIC]
+FUZZ_FNAME: ./SIGSEGV.EXC_BAD_ACCESS.PC.0000000105f5f4bf.STACK.0000000f38a4c8be.ADDR.0000000000000000.fuzz
+PID: 58193
+SIGNAL: SIGSEGV (11)
+EXCEPTION: EXC_BAD_ACCESS
+FAULT ADDRESS: 0
+CRASH FRAME PC: 105f5f4bf
+STACK HASH: 0000000f38a4c8be
+STACK: 
+0   mpv                           	0x0000000105f5f4bf fill_audio_out_buffers + 575 (audio.c:810)
+1   mpv                           	0x0000000105f90be0 run_playloop + 176 (playloop.c:1104)
+2   mpv                           	0x0000000105f869e7 play_current_file + 5527 (loadfile.c:1564)
+3   mpv                           	0x0000000105f85244 mp_play_files + 324 (loadfile.c:1736)
+4   mpv                           	0x0000000105f8a4a4 mpv_main + 180 (main.c:458)
+5   mpv                           	0x00000001060136fb playback_thread + 43 (macosx_application.m:270)
+6   libsystem_pthread.dylib       	0x00007fff5ed2a661 _pthread_body + 340
+7   libsystem_pthread.dylib       	0x00007fff5ed2a50d _pthread_start + 377
+8   libsystem_pthread.dylib       	0x00007fff5ed29bf9 thread_start + 13
+=====================================================================
+=====================================================================
+TIME: 2019-07-15.16:34:32
+=====================================================================
+FUZZER ARGS:
+ mutationsPerRun : 6
+ externalCmd     : NULL
+ fuzzStdin       : FALSE
+ timeout         : 5 (sec)
+ ASLimit         : 0 (MiB)
+ RSSLimit        : 0 (MiB)
+ DATALimit       : 0 (MiB)
+ wordlistFile    : NULL
+ fuzzTarget   : ../mpv/build/mpv -length=1 ___FILE___ 
+ORIG_FNAME: ../samples/mkv_samples//aca6e333e711e6c6aaa4dd2e23d013b8.00004098.honggfuzz.cov
+FUZZ_FNAME: ./SIGSEGV.EXC_BAD_ACCESS.PC.000000010b8534bf.STACK.0000000f38a4c8be.ADDR.0000000000000000.fuzz
+PID: 65727
+SIGNAL: SIGSEGV (11)
+EXCEPTION: EXC_BAD_ACCESS
+FAULT ADDRESS: 0
+CRASH FRAME PC: 10b8534bf
+STACK HASH: 0000000f38a4c8be
+STACK: 
+0   mpv                           	0x000000010b8534bf fill_audio_out_buffers + 575 (audio.c:810)
+1   mpv                           	0x000000010b884be0 run_playloop + 176 (playloop.c:1104)
+2   mpv                           	0x000000010b87a9e7 play_current_file + 5527 (loadfile.c:1564)
+3   mpv                           	0x000000010b879244 mp_play_files + 324 (loadfile.c:1736)
+4   mpv                           	0x000000010b87e4a4 mpv_main + 180 (main.c:458)
+5   mpv                           	0x000000010b9076fb playback_thread + 43 (macosx_application.m:270)
+6   libsystem_pthread.dylib       	0x00007fff5ed2a661 _pthread_body + 340
+7   libsystem_pthread.dylib       	0x00007fff5ed2a50d _pthread_start + 377
+8   libsystem_pthread.dylib       	0x00007fff5ed29bf9 thread_start + 13
+=====================================================================
+=====================================================================
+TIME: 2019-07-15.16:38:09
+=====================================================================
+FUZZER ARGS:
+ mutationsPerRun : 6
+ externalCmd     : NULL
+ fuzzStdin       : FALSE
+ timeout         : 5 (sec)
+ ASLimit         : 0 (MiB)
+ RSSLimit        : 0 (MiB)
+ DATALimit       : 0 (MiB)
+ wordlistFile    : NULL
+ fuzzTarget   : ../mpv/build/mpv -length=1 ___FILE___ 
+ORIG_FNAME: ../samples/mkv_samples//a77720fecd2fe507afcfe44705d28186.000039e1.honggfuzz.cov
+FUZZ_FNAME: ./SIGSEGV.EXC_BAD_ACCESS.PC.00000001047c74bf.STACK.0000000f38a4c8be.ADDR.0000000000000000.fuzz
+PID: 66531
+SIGNAL: SIGSEGV (11)
+EXCEPTION: EXC_BAD_ACCESS
+FAULT ADDRESS: 0
+CRASH FRAME PC: 1047c74bf
+STACK HASH: 0000000f38a4c8be
+STACK: 
+0   mpv                           	0x00000001047c74bf fill_audio_out_buffers + 575 (audio.c:810)
+1   mpv                           	0x00000001047f8be0 run_playloop + 176 (playloop.c:1104)
+2   mpv                           	0x00000001047ee9e7 play_current_file + 5527 (loadfile.c:1564)
+3   mpv                           	0x00000001047ed244 mp_play_files + 324 (loadfile.c:1736)
+4   mpv                           	0x00000001047f24a4 mpv_main + 180 (main.c:458)
+5   mpv                           	0x000000010487b6fb playback_thread + 43 (macosx_application.m:270)
+6   libsystem_pthread.dylib       	0x00007fff5ed2a661 _pthread_body + 340
+7   libsystem_pthread.dylib       	0x00007fff5ed2a50d _pthread_start + 377
+8   libsystem_pthread.dylib       	0x00007fff5ed29bf9 thread_start + 13
+=====================================================================
